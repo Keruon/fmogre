@@ -1,7 +1,7 @@
 # fmogre
 code for the FM Ogre Eurorack module: 
-https://www.muffwiggler.com/forum/viewtopic.php?t=97630
-https://www.muffwiggler.com/forum/viewtopic.php?t=134469
+https://www.modwiggler.com/forum/viewtopic.php?t=97630
+https://www.modwiggler.com/forum/viewtopic.php?t=134469
 
 ## License
 ```
