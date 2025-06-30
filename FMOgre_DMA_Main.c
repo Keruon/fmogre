@@ -56,11 +56,27 @@
  *          pin 28: AVdd
 */
 
+/* changes to enable I2C in multi-chip setup
+   using I2C code from https://github.com/FrankLaterza/I2C_dsPIC33FJ/tree/master
+   TODO: verify&fix the port definitions, import the i2c code
+
+	    RB8 (44):         (5Vtol)  Sync Out (25% duty cycle pulse train) is now RC4 (37)
+            -> SCL1 (44)
+	    RB9  (1):         (5Vtol)  Sync In is now RC3
+     	    -> SDA1  (1)
+	    RC6  (2): 	      i/o Enable I2C master - when this pin is high, we are active master	
+*/
+
 #include <stdio.h>
 #include <p33FJ128GP804.h>
 #include "dsp.h"
 #include <stdint.h>
 #include <string.h>
+
+#include "i2c.h"
+#include <libpic30.h>
+#include <stdbool.h>
+#include <xc.h>
 
 // DSPIC33FJ64GP802 Configuration Bit Settings
 
